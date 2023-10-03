@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NuevoClienteComponent } from './components/cliente/nuevo-cliente/nuevo-cliente.component';
 import { ListaClientesComponent } from './components/cliente/lista-clientes/lista-clientes.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

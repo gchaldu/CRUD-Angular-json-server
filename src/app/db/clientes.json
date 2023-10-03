@@ -8,13 +8,6 @@
       "id": 6
     },
     {
-      "apellido": "Pepe",
-      "nombre": "Lapua",
-      "dni": "60",
-      "fechaInicio": "2023-09-29",
-      "id": 7
-    },
-    {
       "apellido": "Cavani",
       "nombre": "Edinson",
       "dni": "60",
@@ -22,10 +15,10 @@
       "id": 9
     },
     {
-      "apellido": "Chiquito",
-      "nombre": "Romero",
-      "dni": "50",
-      "fechaInicio": "2023-09-28",
+      "apellido": "Lani",
+      "nombre": "Lucas",
+      "dni": 50,
+      "fechaInicio": "2023-10-04",
       "id": 10
     }
   ]

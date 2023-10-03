@@ -1,6 +1,9 @@
 
 import { Component, OnInit } from '@angular/core';
+import { clientesI } from 'src/app/interfaces/clientei';
 import { ClienteService } from 'src/app/services/cliente.service';
+
+
 
 
 @Component({
@@ -10,7 +13,7 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ListaClientesComponent implements OnInit{
 
-  listaClientes:any[]=[];
+  listaClientes:clientesI[]=[];
 
   constructor(private clienteService: ClienteService){}
 
@@ -20,7 +23,14 @@ export class ListaClientesComponent implements OnInit{
 
   async mostrarClientes(){
     this.listaClientes = await this.clienteService.getClientes()
-    console.log(this.listaClientes)
+    /* this.listaClientes.forEach(item=>console.log(item.nombre)) */
+  }
+
+  async eliminarCliente(id: number){
+    if(confirm(`Desea eliminar el cliente con id ${id} ?`)){
+      this.clienteService.deleteCliente(id)
+      //console.log(id)
+    }
   }
 
 }

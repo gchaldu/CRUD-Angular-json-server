@@ -15,7 +15,29 @@ export class ClienteService {
       const clientes = await resultado.json();
       return clientes;
     } catch (error) {
-      alert(error);
+      console.log(error);
+    }
+  }
+
+  async deleteCliente(id:number){
+    try {
+      await fetch(`${this.url}/${id}`,
+                  {method:'DELETE'}
+      )
+      window.location.href = 'index.html'
+    } catch (error) {
+      alert(error)
+    }
+  }
+
+  async postCliente(cliente:any){
+    try {
+      await fetch(this.url,
+                  {method:'POST', body: JSON.stringify(cliente), headers: {'Content-type':'application/json'}}
+        )
+        window.location.href='index.html'
+    } catch (error) {
+      console.log(error)
     }
   }
 }
