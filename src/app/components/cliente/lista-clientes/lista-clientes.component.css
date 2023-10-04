@@ -26,9 +26,16 @@ table {
     padding: 1rem;
   }
 
+  tbody tr:hover{
+    background-color: aqua;
+  }
+
   /* Estilos alternos para las filas */
   tbody tr:nth-child(even) {
     background-color: #f2f2f2;
+  }
+  tbody tr:nth-child(even):hover {
+    background-color:aqua;
   }
 
   /* Estilos para la primera fila de datos */
