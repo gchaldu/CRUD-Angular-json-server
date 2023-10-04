@@ -10,8 +10,8 @@
     {
       "apellido": "Cavani",
       "nombre": "Edinson",
-      "dni": "60",
-      "fechaInicio": "2023-09-28",
+      "dni": 60,
+      "fechaInicio": "2023-09-29",
       "id": 9
     },
     {

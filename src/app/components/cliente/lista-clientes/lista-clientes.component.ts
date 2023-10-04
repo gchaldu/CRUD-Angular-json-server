@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { clientesI } from 'src/app/interfaces/clientei';
 import { ClienteService } from 'src/app/services/cliente.service';
 
@@ -29,7 +30,6 @@ export class ListaClientesComponent implements OnInit{
   async eliminarCliente(id: number){
     if(confirm(`Desea eliminar el cliente con id ${id} ?`)){
       this.clienteService.deleteCliente(id)
-      //console.log(id)
     }
   }
 

@@ -7,18 +7,22 @@ import { NuevoClienteComponent } from './components/cliente/nuevo-cliente/nuevo-
 import { ListaClientesComponent } from './components/cliente/lista-clientes/lista-clientes.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarClienteComponent } from './components/cliente/editar-cliente/editar-cliente.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NuevoClienteComponent,
     ListaClientesComponent,
-    NavbarComponent
+    NavbarComponent,
+    EditarClienteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

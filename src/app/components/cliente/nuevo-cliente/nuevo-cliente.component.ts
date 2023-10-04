@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { clientesI } from 'src/app/interfaces/clientei';
 import { ClienteService } from 'src/app/services/cliente.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class NuevoClienteComponent implements OnInit{
 
   constructor(
               private clienteService: ClienteService,
-              private formsBuildes: FormBuilder
+              private formsBuildes: FormBuilder,
               ){}
 
   ngOnInit(): void {

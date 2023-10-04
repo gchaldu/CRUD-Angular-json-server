@@ -16,6 +16,7 @@
           <td>{{item.dni}}</td>
           <td>{{item.fechaInicio}}</td>
           <td><a href="" (click)="eliminarCliente(item.id)">Eliminar</a></td>
+          <td><a href="" [routerLink]="['/editar', item.id]">Editar</a></td>
         </tr>
       </tbody>
   </table>
