@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { validar } from 'src/app/helpers/funciones';
 import { clientesI } from 'src/app/interfaces/clientei';
@@ -13,7 +13,6 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class EditarClienteComponent implements OnInit {
 
-  form!: FormGroup;
   cliente: clientesI | null = {
     apellido:'',
     nombre:'',
@@ -22,21 +21,26 @@ export class EditarClienteComponent implements OnInit {
     id:0
   };
 
+  public myForm: FormGroup = new FormGroup({
+    editApellido: new FormControl('', [],[]),
+    editNombre: new FormControl('', [],[]),
+    editDni: new FormControl(0, [],[])
+  })
+
+  public form:FormGroup = this.formBuilder.group({
+    editApellido: [''],
+    editNombre: [''],
+    editDni: [0],
+    editFechaInicio: [''],
+    editId: [0]
+  });
+
   constructor(
     private formBuilder: FormBuilder,
     private clienteService: ClienteService,
     private route: ActivatedRoute,
     private router: Router
-  ) {
-
-    this.form = this.formBuilder.group({
-      editApellido: [''],
-      editNombre: [''],
-      editDni: [0],
-      editFechaInicio: [''],
-      editId: [0]
-    });
-  }
+  ) {}
 
   async ngOnInit() {
     await this.initForm();
